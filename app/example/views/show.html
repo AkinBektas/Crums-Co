@@ -8,23 +8,19 @@
   <div class="padding">
     <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
     <div ng-hide="showSpinner">
-      <h2 ng-bind="ingredienten['Vlees']"></h2>
+      <h2 ng-bind="example['Ingredienten']"></h2>
       
       
-      
-       <p>Groente: <span ng-bind="ingredienten['Groente']"></span></p> 
-      
-       <p>Ingredienten: <span ng-bind="ingredienten['Ingredienten']"></span></p> 
       
 
 
-      <super-modal-show location="ingredienten#edit?id={{ ingredienten.id }}">
+      <super-modal-show location="example#edit?id={{ example.id }}">
         <button class="button button-block button-positive">
           Edit
         </button>
       </super-modal-show>
 
-      <button ng-click="remove(ingredienten.id)" class="button button-block button-negative">
+      <button ng-click="remove(example.id)" class="button button-block button-negative">
         Remove
       </button>
     </div>

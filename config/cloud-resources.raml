@@ -16,8 +16,8 @@ traits:
           default: 63635
 
 schemas:
-  - ingredienten_collection: '{"$schema":"http://json-schema.org/schema","title":"ingredienten collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical ingredienten representation","properties":{"Vlees":{"type":"string"},"Groente":{"type":"string"},"Ingredienten":{"type":"string"}},"required":[]}}}}'
-  - ingredienten_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical ingredienten representation","properties":{"object":{"type":"object","properties":{"Vlees":{"type":"string"},"Groente":{"type":"string"},"Ingredienten":{"type":"string"}},"required":[]}}}'
+  - example_collection: '{"$schema":"http://json-schema.org/schema","title":"example collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical example representation","properties":{"Ingredienten":{"type":"string"}},"required":[]}}}}'
+  - example_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical example representation","properties":{"object":{"type":"object","properties":{"Ingredienten":{"type":"string"}},"required":[]}}}'
 
 resourceTypes:
   - dolan_db_collection:
@@ -100,10 +100,10 @@ resourceTypes:
           200:
 
 
-/ingredienten:
+/example:
   description: |
     {
-      "resourceName": "ingredienten",
+      "resourceName": "example",
       "identifierKey": "id"
     }
   type: dolan_db_collection

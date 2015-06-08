@@ -15,16 +15,36 @@
 	</label>
   </div>
 
-  <div class="row"
-	  <ul class="list">
-	  	<li class="item col">Paprika</li>
-	  	<li class="item col">Kaas</li>
-	  	<li class="item col">Kip</li>
-	  	<li class="item col">Sla</li>
-	  	<li class="item col">Rund</li>
-	  </ul>
+  <div ng-controller="IndexController">
+  <super-navbar>
+    <super-navbar-title>
+      Producten Index
+    </super-navbar-title>
+  </super-navbar>
+
+  <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+  <div ng-hide="showSpinner">
+    <ul class="list" ng-hide="examples.length == 0">
+
+      <super-navigate location="example#show" data-params-id="{{ example.id }}" ng-repeat="example in examples">
+        <li class="item item-icon-right">
+          <span ng-bind="example['Ingredienten']"></span>
+          <i class="icon super-ios7-arrow-right"></i>
+        </li>
+      </super-navigate>
+
+    </ul>
+
+    <h4 ng-show="examples.length == 0" class="assertive padding">
+      No examples found. Create one?
+    </h4>
+
+    <super-modal-show location="example#new">
+      <button class="button button-full button-positive">
+        Create a new example
+      </button>
+    </super-modal-show>
   </div>
-  
   <a href="" class="button button-block button-positive">Even schudden!</a>
   
 </div>

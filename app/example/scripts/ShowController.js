@@ -1,14 +1,14 @@
 angular
-  .module('ingredienten')
-  .controller("ShowController", function ($scope, Ingredienten, supersonic) {
-    $scope.ingredienten = null;
+  .module('example')
+  .controller("ShowController", function ($scope, Example, supersonic) {
+    $scope.example = null;
     $scope.showSpinner = true;
     $scope.dataId = undefined;
 
     var _refreshViewData = function () {
-      Ingredienten.find($scope.dataId).then( function (ingredienten) {
+      Example.find($scope.dataId).then( function (example) {
         $scope.$apply( function () {
-          $scope.ingredienten = ingredienten;
+          $scope.example = example;
           $scope.showSpinner = false;
         });
       });
@@ -27,7 +27,7 @@ angular
 
     $scope.remove = function (id) {
       $scope.showSpinner = true;
-      $scope.ingredienten.delete().then( function () {
+      $scope.example.delete().then( function () {
         supersonic.ui.layers.pop();
       });
     }

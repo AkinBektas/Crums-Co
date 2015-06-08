@@ -21,9 +21,8 @@ module.exports =
     }
   ]
 
-  initialView:
-    id: "index"
-    location: "ingredienten#index"
+  # rootView:
+  #   location: "example#recept-vinden"
 
   preloads: [
     {

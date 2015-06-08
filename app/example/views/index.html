@@ -1,30 +1,30 @@
 <div ng-controller="IndexController">
   <super-navbar>
     <super-navbar-title>
-      Ingredienten Index
+      Example Index
     </super-navbar-title>
   </super-navbar>
 
   <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
   <div ng-hide="showSpinner">
-    <ul class="list" ng-hide="ingredientens.length == 0">
+    <ul class="list" ng-hide="examples.length == 0">
 
-      <super-navigate location="ingredienten#show" data-params-id="{{ ingredienten.id }}" ng-repeat="ingredienten in ingredientens">
+      <super-navigate location="example#show" data-params-id="{{ example.id }}" ng-repeat="example in examples">
         <li class="item item-icon-right">
-          <span ng-bind="ingredienten['Vlees']"></span>
+          <span ng-bind="example['Ingredienten']"></span>
           <i class="icon super-ios7-arrow-right"></i>
         </li>
       </super-navigate>
 
     </ul>
 
-    <h4 ng-show="ingredientens.length == 0" class="assertive padding">
-      No ingredientens found. Create one?
+    <h4 ng-show="examples.length == 0" class="assertive padding">
+      No examples found. Create one?
     </h4>
 
-    <super-modal-show location="ingredienten#new">
+    <super-modal-show location="example#new">
       <button class="button button-full button-positive">
-        Create a new ingredienten
+        Create a new example
       </button>
     </super-modal-show>
   </div>
