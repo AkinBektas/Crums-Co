@@ -3,3 +3,56 @@
   text-align: center;
   font-weight: 600;
 }
+
+/*Added by Tomasz*/
+
+@font-face {
+    font-family:'Raleway-Light';
+    src: url('Raleway-Light.ttf');
+}
+
+
+h3{
+  text-align:center; font-family:'Raleway-Light';  font-size:25px;
+}
+h5{text-align: center; font-weight:bolder; text-transform:uppercase;}
+
+
+a.card{
+	text-decoration:none!important; color:#333; text-align: center;
+}
+.new-recipe
+{
+	padding:30px;
+}
+
+.centered
+{
+	text-align:center !important;
+}
+
+.important-card
+{
+	border-top:4px solid #b0cb77;
+}
+.eten
+{
+	margin-bottom:3px;
+}
+.eten span{
+	font-size: 12px; 
+}
+
+i.small.icon{
+
+}
+
+i.super-android-close
+{
+	font-size:6px;
+	min-width:6px;
+	width:6px;
+	background-size:50% 50%;
+
+	outline:1px solid red;
+}

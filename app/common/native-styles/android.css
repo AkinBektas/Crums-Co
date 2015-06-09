@@ -4,16 +4,18 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #00B5FF;
+  background-color: #fafafa;
   color: #ffffff;
+  border-bottom: 2px #b8b8b8 solid !important;
   padding-left: 6px;
   padding-right: 6px;
 }
 
 navigation-bar title {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
+  color:#262626;
+  font-size:16px;
+  font-weight:bolder;
+  text-transform: uppercase;
 }
 
 navigation-bar button {
@@ -39,17 +41,17 @@ navigation-bar back-button {
 
 tab-bar {
   background-color: #ffffff;
-  border-top: 1px #d8d8d8 solid;
+  border-top: 2px #b8b8b8 solid !important;
 }
 
 tab-bar tab-bar-item {
-  color: #b0b1b4;
+  color: #7d7d7d;
   font-family: "Roboto";
   font-size: 10px;
 }
 
 tab-bar tab-bar-item:selected {
-  color: #1596f7;
+  color: #b0cb77;
 }
 
 tab-bar divider {
@@ -57,7 +59,7 @@ tab-bar divider {
 }
 
 tab-bar tab-bar-item marker-top:selected {
-  background-color: #1596f7;
+  background-color: #b0cb77;
 }
 
 tab-bar-item#settings {
@@ -71,3 +73,4 @@ tab-bar-item#recept-vinden {
 tab-bar-item#recept-toevoegen {
   background-image: url(icons/home.svg);
 }
+
