@@ -12,9 +12,6 @@
       <input type="text" placeholder="Voedsel zoeken ...">
   </label>
   </div>
-  <div class="list list-inset">
-	
-  </div>
 
   <div ng-controller="IndexController">
   <super-navbar>
@@ -28,10 +25,13 @@
     <ul class="list" ng-hide="examples.length == 0">
 
       <super-navigate location="example#show" data-params-id="{{ example.id }}" ng-repeat="example in examples">
-        <li class="button button-outline eten">
-          <span ng-bind="example['Ingredienten']"></span>
-          <i class="small icon super-android-close"></i>
+        <super-navbar-button ng-click="cancel()">
+        <li class="button button-light eten">
+          <span ng-bind="example['Ingredienten'] "></span>
+          
+          <i class="smallicon super-android-close"></i>
         </li>
+        </super-navbar-button>
       </super-navigate>
 
     </ul>
@@ -46,6 +46,6 @@
       </button>
     </super-modal-show>
   </div>
-  <a href="" class="button button-block button-positive">Even schudden!</a>
+
   
 </div>

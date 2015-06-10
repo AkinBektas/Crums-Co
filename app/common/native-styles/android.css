@@ -3,18 +3,26 @@
  * Read more about native styles at http://docs.appgyver.com
  ***********************************************************/
 
+@font-face {
+    font-family:"Raleway-Light";
+    src: url("Raleway-Light.ttf");
+}
+
+p,h1,h2,h3,h4,h5,a{font-family:"Raleway-Light" !important; }
+
 navigation-bar {
-  background-color: #fafafa;
+  background-color: #b0cb77;
   color: #ffffff;
-  border-bottom: 2px #b8b8b8 solid !important;
+
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.25) !important;
   padding-left: 6px;
   padding-right: 6px;
 }
 
 navigation-bar title {
-  color:#262626;
+  color:#ffffff;
   font-size:16px;
-  font-weight:bolder;
+  font-weight:800;
   text-transform: uppercase;
 }
 
@@ -46,7 +54,7 @@ tab-bar {
 
 tab-bar tab-bar-item {
   color: #7d7d7d;
-  font-family: "Roboto";
+  font-family: 'Raleway-Light';
   font-size: 10px;
 }
 

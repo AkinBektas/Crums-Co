@@ -6,16 +6,13 @@
 
 /*Added by Tomasz*/
 
-@font-face {
-    font-family:'Raleway-Light';
-    src: url('Raleway-Light.ttf');
-}
-
+body{background:#f2f2f2;}
 
 h3{
   text-align:center; font-family:'Raleway-Light';  font-size:25px;
 }
 h5{text-align: center; font-weight:bolder; text-transform:uppercase;}
+
 
 
 a.card{
@@ -26,6 +23,7 @@ a.card{
 	padding:30px;
 }
 
+.full{width:100%;}
 .centered
 {
 	text-align:center !important;
@@ -42,17 +40,20 @@ a.card{
 .eten span{
 	font-size: 12px; 
 }
-
-i.small.icon{
-
+.lighttittle{color:#999999 !important;}
+.cardlist{
+  border-radius: 2px !important;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.25) !important;
+  overflow: hidden !important;
 }
 
+i.bigplus{font-size:36px !important; color:#cfcfcf !important;}
+
+.item-thumbnail-left{max-height:64px !important; height:64px;}
+a.item-thumbnail-left{max-height:64px !important; height:64px;}
 i.super-android-close
 {
-	font-size:6px;
-	min-width:6px;
-	width:6px;
-	background-size:50% 50%;
+	font-size:12px !important;
 
-	outline:1px solid red;
+
 }
