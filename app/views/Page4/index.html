@@ -1,0 +1,51 @@
+<div ng-controller="Page4Ctrl" id="Page4" >
+<div class="header"><h1 class="nav-tit">{{ recepten.name }}</h1></div>
+  <div id="picture_field0" ng-click="picture_field0Tap()">
+    <div class="item item-image">
+      <img ng-src="{{ recepten.picture.url }}"></img>
+    </div>
+  </div>
+  <div class="padding">
+    <!-- <h2 class="lighttittle"></h2> -->
+    <h5 class="lighttittle">Ingrediënten</h5>
+
+    <div id="list_item2" ng-click="list_item2Tap()">
+      <div class="list card">
+        <div class="item">
+          {{ recepten.ingredienten }}
+        </div>
+      </div>
+    </div>
+
+    <div id="card_with_image_on_left_two_text_rows3" ng-click="card_with_image_on_left_two_text_rows3Tap()">
+<div class="list card">
+  <div class="item item-avatar">
+    <img ng-src="{{ recepten.stap1.url }}">
+    <h2>Stap 1</h2>
+    <p>{{ recepten.stap1info }}</p>
+  </div>
+</div>
+
+</div>
+
+<div id="card_with_image_on_left_two_text_rows4" ng-click="card_with_image_on_left_two_text_rows4Tap()">
+<div class="list card">
+  <div class="item item-avatar">
+    <img ng-src="{{ recepten.stap2.url }}">
+    <h2>Stap 2</h2>
+    <p>{{ recepten.stap2info }}</p>
+  </div>
+</div>
+
+</div>
+
+<div id="card_with_image_on_left_two_text_rows5" ng-click="card_with_image_on_left_two_text_rows5Tap()">
+<div class="list card">
+  <div class="item item-avatar">
+    <img ng-src="{{ recepten.stap3.url }}">
+    <h2>Stap 3</h2>
+    <p>{{ recepten.stap3info }}</p>
+  </div>
+</div>
+  </div>
+</div>

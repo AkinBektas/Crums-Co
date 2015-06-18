@@ -1,0 +1,47 @@
+<div ng-controller="Page1Ctrl" id="Page1">
+  <div class="header"><h1 class="nav-tit">ZOEK EEN RECEPT</h1></div>
+    <div class="padding wholepage">
+
+      <div class="important-card card padding">
+        <div id="text_field1" ng-click="text_field1Tap()">
+            <label class="item item-input">
+              <input type="text" placeholder="Ingredienten toevoegen..." ng-model="text_field1.value">
+              <div id="button3" ng-click="button3Tap()">
+                <button class="button button-icon ion-android-add"></button>
+              </div>
+            </label>
+
+        </div>
+      </div>
+
+
+<ul class="list">
+      <li><a
+        href="#"
+        class="smallicon button icon button-light eten"
+        ng-repeat="item in ingredienten"
+        ng-click="list2ListTap(item)">
+        {{ item.ingredienten }}
+        <i class="icon ion-android-close"></i>
+      </a>
+      <li>
+
+    </ul>
+    <h3>Schud het toestel 2x </h3>
+    <h5 class="lighttittle">om recepten te genereren</h5>
+     <div class="item item-image schudden">
+      <img src="/images/background.png"></img>
+    </div>
+    <div id="button4" ng-click="button4Tap()">
+<button class="button invisible">
+  Random recept
+</button>
+
+
+
+
+
+
+</div>
+  </div>
+</div>

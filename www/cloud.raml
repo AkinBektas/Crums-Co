@@ -1,0 +1,123 @@
+#%RAML 0.8
+title: Steroids Data
+mediaType: application/json
+baseUri: https://rest-api.appgyver.com/v1/
+
+traits:
+  - securedBySteroidsApiKey:
+      headers:
+        steroidsApiKey:
+          type: string
+          example: identificationhashgoeshere
+          default: 64e8f6c80c4a0b03e361b7b389e8f9814f185e49617453a2a7d9d1c487caf1d3
+        steroidsAppId:
+          type: integer
+          example: 1234
+          default: 66046
+
+schemas:
+  - ingredientens: '{"$schema":"http://json-schema.org/schema","title":"ingredienten collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical ingredienten representation","properties":{"updated_at":{"type":"string"},"created_at":{"type":"string"},"__loc":{"type":"string"},"ingredienten":{"type":"string"},"tags":{"type":"array"},"updated_by":{"type":"string"},"created_by":{"type":"string"},"app_user_object_uid":{"type":"string"},"published":{"type":"boolean"},"uid":{"type":"string"},"_version":{"type":"integer"},"ACL":{"type":"object"}},"required":[]}}}}'
+  - ingredienten: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical ingredienten representation","properties":{"object":{"type":"object","properties":{"updated_at":{"type":"string"},"created_at":{"type":"string"},"__loc":{"type":"string"},"ingredienten":{"type":"string"},"tags":{"type":"array"},"updated_by":{"type":"string"},"created_by":{"type":"string"},"app_user_object_uid":{"type":"string"},"published":{"type":"boolean"},"uid":{"type":"string"},"_version":{"type":"integer"},"ACL":{"type":"object"}},"required":[]}}}'
+  - receptens: '{"$schema":"http://json-schema.org/schema","title":"recepten collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical recepten representation","properties":{"updated_at":{"type":"string"},"created_at":{"type":"string"},"__loc":{"type":"string"},"picture":{"type":"object"},"name":{"type":"string"},"tags":{"type":"array"},"updated_by":{"type":"string"},"created_by":{"type":"string"},"app_user_object_uid":{"type":"string"},"published":{"type":"boolean"},"uid":{"type":"string"},"ingredienten":{"type":"array"},"_version":{"type":"integer"},"ACL":{"type":"object"}},"required":[]}}}}'
+  - recepten: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical recepten representation","properties":{"object":{"type":"object","properties":{"updated_at":{"type":"string"},"created_at":{"type":"string"},"__loc":{"type":"string"},"picture":{"type":"object"},"name":{"type":"string"},"tags":{"type":"array"},"updated_by":{"type":"string"},"created_by":{"type":"string"},"app_user_object_uid":{"type":"string"},"published":{"type":"boolean"},"uid":{"type":"string"},"ingredienten":{"type":"array"},"_version":{"type":"integer"},"ACL":{"type":"object"}},"required":[]}}}'
+
+resourceTypes:
+  - built_io_collection:
+      usage: This resourceType should be used for any collection of items
+      is: [ securedBySteroidsApiKey ]
+      get:
+        description: |
+          {
+            "action": "collection"
+          }
+        responses:
+          200:
+            description: |
+              {
+                "rootKey": "objects"
+              }
+            body:
+              application/json:
+                schema: <<resourcePathName>> # e.g cars
+      post:
+        description: |
+          {
+            "action": "create",
+            "rootKey": "object"
+          }
+        body:
+          application/json:
+            schema: <<resourcePathName | !singularize>>
+        responses:
+          200:
+            description: |
+              {
+                "rootKey": "object"
+              }
+            body:
+              application/json:
+                schema: <<resourcePathName | !singularize>> # e.g. car
+
+  - built_io_member:
+      usage: This resourceType should be used for any built.io item
+      is: [ securedBySteroidsApiKey ]
+      get:
+        description: |
+          {
+            "action": "find"
+          }
+        responses:
+          200:
+            description: |
+              {
+                "rootKey": "object"
+              }
+            body:
+              application/json:
+                schema: <<resourcePathName>> # e.g. car
+      put:
+        description: |
+          {
+            "action": "update",
+            "rootKey": "object"
+          }
+        body:
+          application/json:
+            schema: <<resourcePathName | !singularize>>
+        responses:
+          200:
+            description: |
+              {
+                "rootKey": "object"
+              }
+            body:
+              application/json:
+                schema: <<resourcePathName>>
+      delete:
+        description: |
+          {
+            "action": "destroy"
+          }
+        responses:
+          200:
+
+
+/ingredienten:
+  description: |
+    {
+      "resourceName": "ingredienten"
+    }
+  type: built_io_collection
+  /{id}:
+    type: built_io_member
+
+/recepten:
+  description: |
+    {
+      "resourceName": "recepten"
+    }
+  type: built_io_collection
+  /{id}:
+    type: built_io_member
+
+

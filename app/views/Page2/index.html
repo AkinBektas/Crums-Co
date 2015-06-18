@@ -1,0 +1,31 @@
+<div ng-controller="Page2Ctrl" id="Page2">
+
+ <div class="header"><h1 class="nav-tit">MIJN RECEPTEN</h1></div>
+  <div class="padding flex-container">
+
+     <div  id="button2"  class="card flex-item important-card" ng-click="button2Tap()">
+      <div class="item item-image new-recipe">
+         <i class="icon ion-android-add bigplus"></i>
+      </div>
+        <h5>Voeg recept toe</h5>
+
+     </div>
+
+
+    <a
+      href="#"
+      class="card flex-item"
+      ng-repeat="item in recepten"
+      ng-click="list3ListTap(item)">
+         <div class="item item-image">
+         <img ng-src="{{ item.picture.url }}"></img>
+      </div>
+      <h5>{{ item.name }}</h5>
+      
+  
+      
+    </a>
+
+</div>
+
+</div>

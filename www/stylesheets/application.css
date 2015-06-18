@@ -1,0 +1,271 @@
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*Added by Tomasz*/
+.even:nth-child(3n+3){
+  float: left;
+}
+.content{position:static !important; min-height:520px !important;}
+.wholepage{height:100%; position:relative;}
+body{background:#f2f2f2 !important; height:auto !important;}
+
+.invisible{border:none !important; background:#f2f2f2; }
+h1.nav-tit{font-weight:bolder; font-size: 16px; margin-top:10px; text-align:center; text-transform:uppercase !important;}
+h3{
+  text-align:center; font-family:'Raleway-Light';  font-size:25px;
+}
+h5{text-align: center; font-weight:bolder; text-transform:uppercase;}
+
+.item-input {padding: 0px 0 0px 16px; font-style:italic !important; }
+
+.schudden{border:none !important; box-shadow:none !important;}
+
+.awesome-nav{background:red !important;}
+
+.small-list h2
+{
+  padding-top: 20px;
+}
+
+#button6{margin-top:20px;}
+
+#button3{padding-right:10px !important; padding-left:10px; border-left:1px solid #dcdcdc}
+
+a.card{
+  text-decoration:none!important; color:#333; text-align: center;
+}
+.new-recipe
+{
+  padding:30px;
+}
+
+.full{width:100%;}
+.centered
+{
+  text-align:center !important;
+}
+
+.button-large{
+  background:#b0cb77; color:#ffffff;border:1px solid #a1ba6c !important;
+}
+
+.right{float:right;} .large{font-size:18px !important; margin-top:-20px;}
+
+.super-paper-airplane{color:#ffffff;}
+
+.important-card
+{
+  border-top:4px solid #b0cb77;
+}
+.eten
+{
+  margin-bottom:3px; margin-right:2px;
+}
+.eten span{
+  font-size: 12px; 
+}
+.lighttittle{color:#999999 !important;}
+.cardlist{
+  border-radius: 2px !important;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.25) !important;
+  overflow: hidden !important;
+}
+
+.category i{color:#b0cb77;float:left;}
+.category p{float: left;}
+
+i.bigplus{font-size:36px !important; color:#cfcfcf !important;}
+
+.item-thumbnail-left{max-height:64px !important; height:64px;}
+a.item-thumbnail-left{max-height:64px !important; height:64px;}
+i.ion-android-close:before
+{
+  font-size:12px !important;
+  padding-left:12px !important;
+  color:#cfcfcf !important;
+
+
+}
+
+.header{
+  width:100%; height:55px;  background:#fafafa; position: relative; z-index:100; padding:7px; border-bottom:1px solid #b8b8b8;
+}
+.header img{position: absolute;
+margin-left: 50%;
+left: -68px;
+  
+}
+
+.header h3{ font-weight:bolder; color:#262626; font-size:24px; text-transform:uppercase !important;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+background: #b0cb77;
+border-color: #b0cb77;
+}
+.checkbox input:before{border-color: #dcdcdc;}
+
+.item-thumbnail-left, .item-thumbnail-left .item-content{min-height:75px !important;}
+
+.item-thumbnail-left i.super-android-close{padding-right:10px !important;}
+
+
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(4) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(5) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(6) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(7) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(8) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 44%;
+    -ms-flex: 0 1 44%;
+    flex: 0 1 44%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+
+    /**************************************
+ *  Tab Bar
+ *************************************/
+
+tab-bar {
+  background-color: #ffffff;
+  border-top: 2px #b8b8b8 solid !important;
+}
+
+tab-bar tab-bar-item {
+  color: #7d7d7d;
+  font-family: 'Raleway-Light';
+  font-size: 10px;
+}
+
+tab-bar tab-bar-item:selected {
+  color: #b0cb77 !important;
+}
+
+tab-bar divider {
+  background-color: #D8D8D8 !important;
+}
+
+tab-bar tab-bar-item marker-top:selected {
+  background-color: #b0cb77 !important;
+}
+
+tab-bar-item#settings {
+  background-image: url(icons/cog.svg);
+}
+
+tab-bar-item#recept-vinden {
+  background-image: url(icons/search.svg);
+}
+
+tab-bar-item#recept-toevoegen {
+  background-image: url(icons/home.svg);
+}
